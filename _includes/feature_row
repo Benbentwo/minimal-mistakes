@@ -19,7 +19,7 @@
         {% if f.image_path %}
           <div class="archive__item-teaser">
           {% if f.image_path contains "fas" %}
-            <i class={% f.image_path | quote %}></i>
+            <i class={{ f.image_path | quote }}></i>
           {% else %}
             <img src=
                 {% if f.image_path contains "://" %}
