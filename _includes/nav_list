@@ -11,6 +11,8 @@
           {% comment %} internal/external URL check {% endcomment %}
           {% if nav.url contains "://" %}
             {% assign nav_url = nav.url %}
+          {% elsif nav.url contains "#" %}
+            {% assign nav_url = nav.url %}
           {% else %}
             {% assign nav_url = nav.url | relative_url %}
           {% endif %}
